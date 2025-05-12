@@ -1,9 +1,20 @@
 export const faqs = [
   {
     question: "Can I see samples?",
-    answer:
-      "Yes! Check the “Samples” page — or DM us for a sample specific to your subject.",
+    answer: (
+      <>
+        Yes! Check the{" "}
+        <a
+          href="#testimonials"
+          className="text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-200"
+        >
+          testimonial section
+        </a>{" "}
+        — or DM us for a sample specific to your subject.
+      </>
+    ),
   },
+
   {
     question: "Is your work plagiarism and AI free?",
     answer:

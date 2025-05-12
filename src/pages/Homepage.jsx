@@ -30,7 +30,7 @@ function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <h2 className="text-3xl font-bold text-center mb-6">Testimonials</h2>
+        <h2 className="text-3xl font-bold text-center ">Testimonials</h2>
         <TestimonialPage />
       </motion.section>
 

@@ -89,10 +89,25 @@ function HeroSection() {
               really matters.
             </p>
           </motion.div>
+          {/* Animated Sentence */}
+          <motion.p
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="text-base sm:text-lg font-semibold text-center text-gray-900 bg-gradient-to-br from-[#f5f7fa] via-[#c3d0e0] to-[#a6c1ee] py-5 px-6 rounded-xl shadow-xl mb-6 border border-blue-300 backdrop-blur-sm"
+          >
+            <span className="block mb-1">
+              🌍 Deal with <strong>150+ countries</strong> and have local bank
+              accounts there…
+            </span>
+            <span className=" decoration-wavy decoration-blue-600 font-medium">
+              ✨ Feel Free to connect and get <strong>70%+ marks</strong>
+            </span>
+          </motion.p>
 
           {/* CTA Button with pulse animation */}
           <a
-            href="https://wa.me//+447465698201" // replace with actual number
+            href="https://wa.me/+447465698201" // replace with actual number
             className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
           >
             <FaWhatsapp className="text-xl sm:text-2xl" />
@@ -136,6 +151,20 @@ function HeroSection() {
                 Our expert team helps international students achieve academic
                 success while balancing work and personal commitments.
               </p>
+              <motion.p
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                className="text-base sm:text-lg font-semibold text-center text-gray-900 bg-gradient-to-br from-[#f5f7fa] via-[#c3d0e0] to-[#a6c1ee] py-5 px-6 rounded-xl shadow-xl mb-6 border border-blue-300 backdrop-blur-sm"
+              >
+                <span className="block mb-1">
+                  🌍 Deal with <strong>150+ countries</strong> and have local
+                  bank accounts there…
+                </span>
+                <span className=" decoration-wavy decoration-blue-600 font-medium">
+                  ✨ Feel Free to connect and get <strong>70%+ marks</strong>
+                </span>
+              </motion.p>
 
               <motion.div
                 initial={{ opacity: 0 }}
