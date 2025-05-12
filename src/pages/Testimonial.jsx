@@ -105,7 +105,7 @@ const TestimonialPage = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 hover:scale-105 text-center"
+                className=" p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 hover:scale-105 text-center"
               >
                 <img
                   src={item.image}
@@ -134,7 +134,7 @@ const TestimonialPage = () => {
             </span>
           </p>
           <a
-            href="https://wa.me/your-number" // replace with actual number
+            href="https://wa.me/+447465698201"
             className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
           >
             <FaWhatsapp className="text-xl sm:text-2xl" />

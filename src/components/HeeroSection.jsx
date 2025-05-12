@@ -92,7 +92,7 @@ function HeroSection() {
 
           {/* CTA Button with pulse animation */}
           <a
-            href="https://wa.me/your-number" // replace with actual number
+            href="https://wa.me//+447465698201" // replace with actual number
             className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
           >
             <FaWhatsapp className="text-xl sm:text-2xl" />
@@ -143,7 +143,7 @@ function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
                 <motion.a
-                  href="http://wa.me/+447465698201"
+                  href="https://wa.me/+447465698201"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 text-lg"

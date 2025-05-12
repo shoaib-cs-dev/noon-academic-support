@@ -75,7 +75,7 @@ const ChargesPage = () => {
             DM us now to get a quick quote!
           </p>
           <a
-            href="https://wa.me/your-number" // replace with your actual number
+            href="https://wa.me/+447465698201"
             className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-600 to-teal-500 text-white font-semibold text-lg rounded-full shadow-md hover:scale-105 transition-transform duration-300"
           >
             <FaWhatsapp className="text-xl" />

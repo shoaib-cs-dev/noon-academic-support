@@ -113,7 +113,7 @@ const ServicesPage = () => {
             Don’t see your task listed? Let’s talk!
           </p>
           <a
-            href="https://wa.me/your-number" // replace with your WhatsApp link
+            href="https://wa.me/+447465698201"
             className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-700 to-cyan-500 text-white font-semibold text-lg rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
           >
             Message Us Now <FaArrowRight className="text-white" />
