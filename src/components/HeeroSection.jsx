@@ -1,7 +1,7 @@
 // components/HeroSection.jsx
 import { motion } from "framer-motion";
 import mobileImage from "../images/mobileHome.jpg";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPlay, FaInfoCircle } from "react-icons/fa";
 
 function HeroSection() {
   // Animation variants
@@ -58,20 +58,17 @@ function HeroSection() {
           variants={staggerContainer}
           className="flex flex-col items-center"
         >
-          {/* Animated Mobile Image */}
           <motion.div
             variants={scaleIn}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full px-4 mb-8"
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <img
-                src={mobileImage}
-                alt="Academic Help"
+              <video
+                src="https://res.cloudinary.com/dsh1el8kp/video/upload/v1747044482/noon_video_h36vhf.mp4"
                 className="w-full h-auto rounded-2xl transform hover:scale-105 transition-transform duration-500"
+                controls
               />
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-purple-500 opacity-0 hover:opacity-10 transition-opacity duration-300 rounded-2xl"></div>
             </div>
           </motion.div>
 
@@ -122,18 +119,16 @@ function HeroSection() {
           <div className="flex items-start gap-12">
             {/* Left Side Image */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="w-1/2"
+              variants={scaleIn}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-full px-4 mb-8"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
-                  src={mobileImage}
-                  alt="Academic Help"
-                  className="w-full h-auto rounded-2xl transform hover:scale-[1.02] transition-transform duration-500"
+                <video
+                  src="https://res.cloudinary.com/dsh1el8kp/video/upload/v1747044482/noon_video_h36vhf.mp4"
+                  className="w-full h-auto rounded-2xl transform hover:scale-105 transition-transform duration-500"
+                  controls
                 />
-                <div className="absolute inset-0 bg-purple-500 opacity-0 hover:opacity-10 transition-opacity duration-300 rounded-2xl"></div>
               </div>
             </motion.div>
 
