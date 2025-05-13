@@ -10,7 +10,16 @@ export const faqs = [
         >
           testimonial section
         </a>{" "}
-        — or DM us for a sample specific to your subject.
+        — or{" "}
+        <a
+          href="https://wa.me/+447465698201"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-600 font-semibold hover:text-green-800 transition-colors duration-200"
+        >
+          chat with us
+        </a>{" "}
+        for a sample specific to your subject.
       </>
     ),
   },
@@ -49,12 +58,26 @@ export const faqs = [
   },
   {
     question: "What subjects do you cover?",
-    answer:
-      "Business, Healthcare, Law, IT, Hospitality, and more. If it's academic, we likely cover it — DM to confirm.",
+    answer: (
+      <>
+        Business, Healthcare, Law, IT, Hospitality, and more. If it's academic,
+        we likely cover it —{" "}
+        <a
+          href="https://wa.me/+447465698201"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-600 font-semibold hover:text-green-800 transition-colors duration-200"
+        >
+          chat with us
+        </a>{" "}
+        to confirm.
+      </>
+    ),
   },
   {
     question: "English isn’t my first language. Can you help?",
-    answer: "Definitely. We adjust tone and complexity to match your needs.",
+    answer:
+      "100%! Most of our students are international. We write in clear, simple English or match your style — so it sounds like you. No red flags, no stress.",
   },
   {
     question: "Do you offer discounts?",
@@ -72,5 +95,21 @@ export const faqs = [
         <li>You receive your final assignment with full reports</li>
       </ul>
     ),
+  },
+  {
+    question: "How do I know you're legit? Can I trust you?",
+    answer:
+      "Great question! We’ve helped 10,000+ students since 2018, have real samples across every subject, and share live updates with you. Plus, you only pay 20% upfront and get Turnitin & AI reports with every task. We’re here for the long term — your trust means everything to us.",
+  },
+
+  {
+    question: "Can I talk to someone before placing an order?",
+    answer:
+      " Of course! You can Message us anytime — we’ll answer your questions, review your task, and guide you through everything with no pressure to order.",
+  },
+  {
+    question: "What if my professor finds out?",
+    answer:
+      "Don’t worry. Everything is confidential, and our writing is original and tailored to your tone. No AI triggers. No plagiarism. No reused content. Just clean, custom-written work you control.",
   },
 ];
