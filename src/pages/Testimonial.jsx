@@ -13,6 +13,8 @@ import poster from "../images/poster.png";
 import presentation from "../images/presentation.jpg";
 import reports from "../images/reports.jpg";
 import research from "../images/reasearch.jpg";
+import essays from "../images/essays.jpg";
+import marketing from "../images/marketing.jpg";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -55,6 +57,16 @@ const testimonials = [
     title: "Posters",
     link: "https://drive.google.com/drive/folders/1rrudWOvq5HEk7wE4vvSz1ltPcy7PaNsB?usp=share_link",
     image: poster,
+  },
+  {
+    title: "Marketing",
+    link: "https://drive.google.com/drive/folders/1KzfEKSUefEeJXBVevf2guENB9j279bSu?usp=share_link",
+    image: marketing,
+  },
+  {
+    title: "Essays",
+    link: "https://drive.google.com/drive/folders/1Y0R9nb1eD5rfVknFznZVjpTLjBOKiUBB?usp=share_link",
+    image: essays,
   },
 ];
 
