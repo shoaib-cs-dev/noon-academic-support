@@ -7,6 +7,10 @@ import chen from "../clients/chen.jpg";
 import khalid from "../clients/khalid.jpg";
 import maria from "../clients/maria.jpg";
 import tania from "../clients/tania.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const testimonials = [
   {
@@ -93,36 +97,52 @@ const ResultsPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-16"
+          className="mt-16"
         >
-          {testimonials.map((client, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group bg-white border border-gray-200 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden"
-            >
-              <div className="flex flex-col items-center text-center">
-                <img
-                  src={client.image}
-                  alt={client.name}
-                  className="w-20 h-20 rounded-full border-4 border-cyan-200 shadow-md mb-4"
-                />
-                <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-800 via-blue-600 to-cyan-400 mb-1">
-                  {client.name}
-                </h3>
-                <p className="text-sm text-gray-500 italic">{client.title}</p>
-                <p className="mt-4 text-gray-700 text-sm leading-relaxed">
-                  “{client.feedback}”
-                </p>
-              </div>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+          >
+            {testimonials.map((client, index) => (
+              <SwiperSlide key={index} className=" pb-8">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group bg-white border border-gray-200 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden"
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <img
+                      src={client.image}
+                      alt={client.name}
+                      className="w-20 h-20 rounded-full border-4 border-cyan-200 shadow-md mb-4"
+                    />
+                    <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-800 via-blue-600 to-cyan-400 mb-1">
+                      {client.name}
+                    </h3>
+                    <p className="text-sm text-gray-500 italic">
+                      {client.title}
+                    </p>
+                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                      “{client.feedback}”
+                    </p>
+                  </div>
 
-              {/* Decorative Gradient Glow */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-600 opacity-10 rounded-full blur-2xl pointer-events-none"></div>
-            </motion.div>
-          ))}
+                  {/* Decorative Glow */}
+                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-600 opacity-10 rounded-full blur-2xl pointer-events-none"></div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </motion.div>
 
         <motion.p
