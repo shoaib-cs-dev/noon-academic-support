@@ -15,6 +15,8 @@ import reports from "../images/reports.jpg";
 import research from "../images/reasearch.jpg";
 import essays from "../images/essays.jpg";
 import marketing from "../images/marketing.jpg";
+import analysis from "../images/analysis.jpg";
+import casestudy from "../images/case-study.jpg";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -67,6 +69,16 @@ const testimonials = [
     title: "Essays",
     link: "https://drive.google.com/drive/folders/1Y0R9nb1eD5rfVknFznZVjpTLjBOKiUBB?usp=share_link",
     image: essays,
+  },
+  {
+    title: "Analysis",
+    link: "https://drive.google.com/drive/folders/1tNZXPYugx-95_Bm9ZrM0TzqhEBlRPjmk?usp=share_link",
+    image: analysis,
+  },
+  {
+    title: "Case Studies",
+    link: "https://drive.google.com/drive/folders/19Qg5lB0yZ4XK5v5HXVzKdNWrFEbKgZ-u?usp=share_link",
+    image: casestudy,
   },
 ];
 
