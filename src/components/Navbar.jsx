@@ -8,12 +8,12 @@ function Navbar() {
 
   const navItems = [
     "Home",
-    "About",
     "Testimonials",
     "Results",
     "Services",
     "Charges",
     "FAQs",
+    "About",
   ];
 
   return (
