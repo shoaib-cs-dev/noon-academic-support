@@ -13,18 +13,18 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-8 px-4 sm:px-2 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="flex justify-center items-center gap-3 mb-10"
+          className="flex items-center gap-3 sm:gap-4 mb-6 px-4 sm:px-0 text-center"
         >
-          <FaQuestionCircle className="text-3xl sm:text-4xl md:text-5xl text-cyan-500 drop-shadow" />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-sky-700 to-cyan-400 text-center">
-            Frequently Asked Questions
+          <FaQuestionCircle className="text-2xl sm:text-3xl md:text-4xl text-cyan-500 drop-shadow" />
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-sky-700 to-cyan-400 leading-snug drop-shadow-s">
+            Freq. Asked Questions
           </h2>
         </motion.div>
 

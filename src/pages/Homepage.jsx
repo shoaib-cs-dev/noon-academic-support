@@ -6,6 +6,7 @@ import ResultsPage from "./Result";
 import ServicesPage from "./ServicePage";
 import ChargesPage from "./ChargesPage";
 import FAQSection from "./FAQSection";
+import About from "./About";
 
 function Home() {
   return (
@@ -19,7 +20,17 @@ function Home() {
         transition={{ duration: 1 }}
       >
         <HeroSection />
-        <ContentSection />
+      </motion.section>
+      {/* About Us Section with Animation */}
+      <motion.section
+        id="about"
+        className="px-4 sm:px-6 md:px-16 py-12 bg-gray-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <h2 className="text-3xl font-bold text-center ">About Us</h2>
+        <About />
       </motion.section>
 
       {/* Testimonials Section with Animation */}

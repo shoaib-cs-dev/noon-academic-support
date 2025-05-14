@@ -57,10 +57,10 @@ const ServicesPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="flex justify-center items-center gap-4 mb-6"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-6 px-4 sm:px-0 text-center"
         >
-          <FaTools className="text-3xl sm:text-4xl md:text-5xl text-cyan-500 drop-shadow" />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-sky-700 to-cyan-400 drop-shadow-sm">
+          <FaTools className="text-2xl sm:text-3xl md:text-4xl text-cyan-500 drop-shadow" />
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-sky-700 to-cyan-400 leading-snug drop-shadow-sm">
             Services We Offer
           </h2>
         </motion.div>
@@ -94,7 +94,7 @@ const ServicesPage = () => {
               className="bg-white rounded-xl shadow-md hover:shadow-xl border border-gray-100 p-6 flex items-start gap-4 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02]"
             >
               <div className="flex-shrink-0">{service.icon}</div>
-              <div className="text-gray-800 font-semibold text-lg leading-snug">
+              <div className="text-gray-800 font-semibold text-base leading-snug">
                 {service.name}
               </div>
             </motion.li>
@@ -105,18 +105,31 @@ const ServicesPage = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16"
+          className="mt-16 text-center"
         >
+          {/* 👇 Added Motivational Sentence */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg sm:text-2xl md:text-2xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 bg-clip-text text-transparent text-center"
+          >
+            Ready to hand over the stress? <br className="hidden sm:block" />
+            We’re taking new projects today!
+          </motion.p>
+
+          {/* Existing Line */}
           <p className="text-xl text-gray-800 font-semibold mb-4">
             Don’t see your task listed? Let’s talk!
           </p>
+
           <a
             href="https://wa.me/+447465698201"
             className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-700 to-cyan-500 text-white font-semibold text-lg rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
           >
-            Message Us Now <FaArrowRight className="text-white" />
+            Let’s Talk About Your Task <FaArrowRight className="text-white" />
           </a>
         </motion.div>
       </div>

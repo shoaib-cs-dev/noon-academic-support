@@ -13,7 +13,7 @@ const ChargesPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-emerald-500 to-teal-400 mb-6 drop-shadow-sm"
+          className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-emerald-500 to-teal-400 mb-6 px-4 sm:px-0 leading-snug drop-shadow-sm"
         >
           💰 Pricing Made Simple
         </motion.h2>
@@ -71,15 +71,15 @@ const ChargesPage = () => {
           viewport={{ once: true }}
           className="mt-14"
         >
-          <p className="text-xl text-gray-800 font-medium mb-5">
-            DM us now to get a quick quote!
+          <p className="text-lg text-gray-800 font-medium mb-5">
+            Quick quote in minutes — message us now and lock today’s pricing
           </p>
           <a
             href="https://wa.me/+447465698201"
             className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-600 to-teal-500 text-white font-semibold text-lg rounded-full shadow-md hover:scale-105 transition-transform duration-300"
           >
             <FaWhatsapp className="text-xl" />
-            Click to Discuss Pricing
+            Get Instant Quote Now
           </a>
         </motion.div>
       </div>

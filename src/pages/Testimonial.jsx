@@ -91,7 +91,7 @@ const TestimonialPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 mb-6 tracking-tight leading-tight"
+          className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 mb-6 tracking-tight sm:tracking-normal leading-snug sm:leading-tight text-center"
         >
           Real Results. Real Work. Real Students.
         </motion.h2>
