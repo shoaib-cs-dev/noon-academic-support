@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shoaib-cs-dev.github.io/noon-academic-support",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh": "DEPLOY_ENV=GH_PAGES vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
