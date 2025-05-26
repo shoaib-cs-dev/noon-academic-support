@@ -96,19 +96,6 @@ const TestimonialPage = () => {
           Real Results. Real Work. Real Students.
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed tracking-wide"
-        >
-          Dive into a showcase of real academic work — spanning
-          <span className="text-indigo-600 font-semibold"> Medicine</span>,
-          <span className="text-purple-600 font-semibold"> Business</span>,
-          <span className="text-pink-600 font-semibold"> Research</span>, and
-          beyond. Each sample reflects the quality and dedication we deliver.
-        </motion.p>
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           spaceBetween={30}

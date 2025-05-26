@@ -70,14 +70,10 @@ const ResultsPage = () => {
         >
           <div className="flex justify-center items-center gap-3 mb-2 flex-wrap">
             <FaAward className="text-2xl sm:text-3xl md:text-4xl text-cyan-500 drop-shadow" />
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 drop-shadow-sm">
-              Our Students' Results
-            </h2>
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 tracking-tight leading-snug sm:leading-tight drop-shadow-sm px-4 sm:px-0">
+              Proof of Performance
+            </h1>
           </div>
-
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 tracking-tight leading-snug sm:leading-tight drop-shadow-sm px-4 sm:px-0">
-            Proof of Performance
-          </h1>
         </motion.div>
 
         <motion.p

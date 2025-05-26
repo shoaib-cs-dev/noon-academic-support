@@ -8,6 +8,7 @@ function Navbar() {
 
   const navItems = [
     "Home",
+    "Guide",
     "Testimonials",
     "Results",
     "Services",

@@ -7,6 +7,7 @@ import ServicesPage from "./ServicePage";
 import ChargesPage from "./ChargesPage";
 import FAQSection from "./FAQSection";
 import About from "./About";
+import FreeAdvancedGuide from "./FreeAdvancedGuide";
 
 function Home() {
   return (
@@ -20,6 +21,16 @@ function Home() {
         transition={{ duration: 1 }}
       >
         <HeroSection />
+      </motion.section>
+      {/* Guide Section with Animation */}
+      <motion.section
+        id="guide"
+        className="px-4 sm:px-6 md:px-16 py-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <FreeAdvancedGuide />
       </motion.section>
 
       {/* Testimonials Section with Animation */}
