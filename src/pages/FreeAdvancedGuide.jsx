@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -9,6 +9,9 @@ import { Typewriter } from "react-simple-typewriter";
 import strategyImg from "../images/Strategies.png";
 import marksImg from "../images/plusmark.jpeg";
 import aiImg from "../images/writefrom.jpeg";
+
+import LoginModal from "../components/LoginModal";
+import { useAuth } from "../context/Context";
 
 const guideData = [
   {
@@ -28,33 +31,59 @@ const guideData = [
   },
 ];
 
-const Card = ({ guide }) => (
-  <div className="bg-white shadow-lg rounded-lg px-6 py-8 relative flex flex-col items-center text-center mx-auto max-w-sm w-full">
-    <span className="absolute top-4 right-4 bg-red-500 text-white text-base font-semibold px-2 py-1 rounded-l-lg">
-      It's Free
-    </span>
-    <h3 className="text-black text-lg font-bold mb-4 mt-8 px-2 leading-tight">
-      {guide.title}
-    </h3>
-    <div className="relative w-32 h-32 bg-black rounded-full flex items-center justify-center mb-12 mt-12">
-      <img
-        src={guide.image}
-        alt={guide.title}
-        className="h-44 object-contain absolute -top-6"
-      />
+const Card = ({ guide, onRequireLogin }) => {
+  const { email } = useAuth();
+
+  const handleClick = () => {
+    if (email) {
+      window.open(guide.link, "_blank");
+    } else {
+      onRequireLogin(guide.link);
+    }
+  };
+
+  return (
+    <div className="bg-white shadow-lg rounded-lg px-6 py-8 relative flex flex-col items-center text-center mx-auto max-w-sm w-full">
+      <span className="absolute top-4 right-4 bg-red-500 text-white text-base font-semibold px-2 py-1 rounded-l-lg">
+        It's Free
+      </span>
+      <h3 className="text-black text-lg font-bold mb-4 mt-8 px-2 leading-tight">
+        {guide.title}
+      </h3>
+      <div className="relative w-32 h-32 bg-black rounded-full flex items-center justify-center mb-12 mt-12">
+        <img
+          src={guide.image}
+          alt={guide.title}
+          className="h-44 object-contain absolute -top-6"
+        />
+      </div>
+      <button
+        onClick={handleClick}
+        className="bg-purple-600 text-white font-normal px-6 py-2 rounded-full hover:bg-purple-700 transition"
+      >
+        Take This Course
+      </button>
     </div>
-    <a
-      href={guide.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-purple-600 text-white font-normal px-6 py-2 rounded-full hover:bg-purple-700 transition"
-    >
-      Take This Course
-    </a>
-  </div>
-);
+  );
+};
 
 const FreeAdvancedGuide = () => {
+  const [showLogin, setShowLogin] = useState(false);
+  const [redirectLink, setRedirectLink] = useState("");
+
+  const handleRequireLogin = (link) => {
+    setRedirectLink(link);
+    setShowLogin(true);
+  };
+
+  const handleLoginSuccess = () => {
+    setShowLogin(false);
+    if (redirectLink) {
+      window.open(redirectLink, "_blank");
+      setRedirectLink("");
+    }
+  };
+
   return (
     <section className="py-12 px-4 max-w-7xl mx-auto text-center">
       <div>
@@ -92,7 +121,7 @@ const FreeAdvancedGuide = () => {
         >
           {guideData.map((guide, index) => (
             <SwiperSlide key={index}>
-              <Card guide={guide} />
+              <Card guide={guide} onRequireLogin={handleRequireLogin} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -101,9 +130,16 @@ const FreeAdvancedGuide = () => {
       {/* Desktop: Flex Row */}
       <div className="hidden md:flex md:justify-center md:gap-2 md:flex-wrap">
         {guideData.map((guide, index) => (
-          <Card key={index} guide={guide} />
+          <Card key={index} guide={guide} onRequireLogin={handleRequireLogin} />
         ))}
       </div>
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={showLogin}
+        onClose={() => setShowLogin(false)}
+        onSuccess={handleLoginSuccess}
+      />
     </section>
   );
 };
