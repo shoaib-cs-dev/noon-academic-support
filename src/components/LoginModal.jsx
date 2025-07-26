@@ -19,7 +19,7 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
 
     try {
       // Send email to Formspree
-      const res = await fetch("https://formspree.io/f/xyzjdbre", {
+      const res = await fetch("https://formspree.io/f/xqabdrab", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
